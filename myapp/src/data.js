@@ -23,3 +23,21 @@ export const sliderItems = [
 
 
 ];
+
+export const categories = [
+    {
+      id: 1,
+      img: "https://2.bp.blogspot.com/-xljX8pEf5Ss/UGavPpgGzDI/AAAAAAAAUFE/oBaac1_D5zw/s1600/Mustang+GT+21.png",
+      title: "Sports Cars",
+    },
+    {
+      id: 2,
+      img: "https://cdn.wallpapersafari.com/55/25/D3leER.png",
+      title: "Economic Cars",
+    },
+    {
+      id: 3,
+      img: "https://www.pngall.com/wp-content/uploads/5/White-Pickup-Truck-PNG-Image.png",
+      title: "Trucks",
+    },
+  ];
