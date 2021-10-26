@@ -8,7 +8,7 @@ export const sliderItems = [
     },
     {
         id: 2,
-        img: 'https://pngimg.com/uploads/bmw/bmw_PNG1675.png',
+        img: 'https://cdn.wallpapersafari.com/55/25/D3leER.png',
         title: 'Cars For College Students',
         desc: "Sign up, Sign in, and get on the road with your new car",
         bg: 'addae6'
@@ -27,17 +27,52 @@ export const sliderItems = [
 export const categories = [
     {
       id: 1,
-      img: "https://2.bp.blogspot.com/-xljX8pEf5Ss/UGavPpgGzDI/AAAAAAAAUFE/oBaac1_D5zw/s1600/Mustang+GT+21.png",
+      img: 'https://www.mustangspecs.com/wp-content/uploads/2020/08/black-ford-mustang-2019-5k-xu-scaled.jpg',
       title: "Sports Cars",
     },
     {
       id: 2,
-      img: "https://cdn.wallpapersafari.com/55/25/D3leER.png",
+      img: 'https://media.architecturaldigest.com/photos/5acfaabe2204b06f8e237e6c/3:2/w_2532,h_1688,c_limit/Model%203%20-%20Red%20Driving%20Sunset.png',
       title: "Economic Cars",
     },
     {
       id: 3,
-      img: "https://www.pngall.com/wp-content/uploads/5/White-Pickup-Truck-PNG-Image.png",
+      img: 'https://www.kbb.com/wp-content/uploads/2021/07/2021-gmc-sierra-at4-hd-front-right.jpg',
       title: "Trucks",
     },
   ];
+
+  export const popularProducts =[
+    {
+        id:1,
+        img:'https://www.thegroupnc.com/wp-content/uploads/2017/12/Honda.png',
+    },
+    {
+        id:2,
+        img:'https://www.pngall.com/wp-content/uploads/5/Pickup-Truck-PNG-File.png',
+    },
+    {
+        id:3,
+        img:'https://www.seekpng.com/png/full/338-3384238_dont-have-a-car-no-problem-front-side.png',
+    },
+    {
+        id:4,
+        img:'http://assets.stickpng.com/images/580b585b2edbce24c47b2cca.png',
+    },
+    {
+        id:5,
+        img:'https://purepng.com/public/uploads/large/purepng.com-chryslerchryslerfiat-chrysler-automobilesfiatcars-1701527440381rrqmw.png',
+    },
+    {
+        id:6,
+        img:'https://www.nicepng.com/png/detail/78-781765_2017-chevrolet-cruze-front.png',
+    },
+    {
+        id:7,
+        img:'https://getmeinsurednow.com/wp-content/uploads/2018/05/22096-5-mercedes-front-image.png',
+    },
+    {
+        id:8,
+        img:'https://i.pinimg.com/originals/70/74/10/70741084c9ffd46ca7fac55d6f186521.png',
+    },
+];
