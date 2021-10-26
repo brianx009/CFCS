@@ -43,7 +43,7 @@ export default function CategoryItem({item}) {
             <Image src={item.img}/>
             <Info>
                 <Title>{item.title}</Title>
-                <Button>Shop</Button>
+                <Button>Shop Now</Button>
             </Info>
         </Container>
     )

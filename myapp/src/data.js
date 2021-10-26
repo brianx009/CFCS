@@ -8,7 +8,7 @@ export const sliderItems = [
     },
     {
         id: 2,
-        img: 'https://cdn.wallpapersafari.com/55/25/D3leER.png',
+        img: 'https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2020/05/chrome-image-411884.png',
         title: 'Cars For College Students',
         desc: "Sign up, Sign in, and get on the road with your new car",
         bg: 'addae6'
