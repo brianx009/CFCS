@@ -1,9 +1,5 @@
-import {
-    FavoriteBorderOutlined,
-    SearchOutlined,
-    ShoppingCartOutlined,
-  } from "@material-ui/icons";
-  import styled from "styled-components";
+import { FavoriteBorderOutlined, SearchOutlined,ShoppingCartOutlined } from '@material-ui/icons';
+import styled from 'styled-components';
   
   const Info = styled.div`
     opacity: 0;
@@ -37,10 +33,10 @@ import {
   `;
   
   const Circle = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 325px;
+    height: 325px;
     border-radius: 50%;
-    background-color: white;
+    background-color: tan;
     position: absolute;
   `;
   

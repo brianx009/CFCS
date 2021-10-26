@@ -65,7 +65,7 @@ export const categories = [
     },
     {
         id:6,
-        img:'https://www.nicepng.com/png/detail/78-781765_2017-chevrolet-cruze-front.png',
+        img:'https://purepng.com/public/uploads/large/purepng.com-chevrolet-cruzecarschevroletchevyautomobilechevrolet-cruze-1701527430489lrin7.png',
     },
     {
         id:7,
