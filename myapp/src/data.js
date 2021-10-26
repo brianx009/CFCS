@@ -57,7 +57,7 @@ export const categories = [
     },
     {
         id:4,
-        img:'http://assets.stickpng.com/images/580b585b2edbce24c47b2cca.png',
+        img:'https://pngimg.com/uploads/mustang/mustang_PNG19.png',
     },
     {
         id:5,
