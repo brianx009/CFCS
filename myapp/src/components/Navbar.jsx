@@ -3,15 +3,27 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+
+
 const Container = styled.div
 `
 height: 100px;
+width:100%;
+background-color:none;
+position fixed;
+z-index:100;
 `;
 
 const Wrapper = styled.div
 `
 padding: 10px 20px;
-display: fles;
+display: flex;
 align-items: center;
 justify-content: space-between;
 `;
@@ -65,6 +77,8 @@ const MenuItem = styled.div`
 
 const Navbar = () => {
     return (
+
+        <Router>
         <Container>
             <Wrapper>
                 <Left>
@@ -76,7 +90,7 @@ const Navbar = () => {
                 </Left>
                 <Center><Logo>CFCS.</Logo></Center>
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
+                    <MenuItem>HOME</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
                     <MenuItem>
                         <Badge badgeContent={4} color='primary'>
@@ -86,6 +100,8 @@ const Navbar = () => {
                     </Right>
             </Wrapper>
         </Container>
+        </Router>
+        
     )
 }
 

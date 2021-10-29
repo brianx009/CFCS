@@ -5,14 +5,21 @@ import Navbar from '../components/Navbar'
 import Slider from '../components/Slider'
 
 
+
+
+
 const Home = () => {
     return (
-        <div className='container'>
+
+  
+              <div className='container'>
             <Announcement/>
             <Navbar/>
             <Slider/>
             <Categories/>
         </div>
+      
+      
     )
 }
 

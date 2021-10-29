@@ -44,7 +44,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #${(props) => props.bg};
+  background-color: #${(props) => props.img};
 `;
 
 const ImgContainer = styled.div`
@@ -57,12 +57,16 @@ const Image = styled.img`
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
-  padding: 50px;
+  width:50%;
+  position:relative;
+  right:50%;
+  text-align:center;
 `;
 
 const Title = styled.h1`
   font-size: 70px;
+  color:white;
+  text-shadow:2px 2px 3px black;
 `;
 
 const Desc = styled.p`
@@ -70,13 +74,20 @@ const Desc = styled.p`
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 3px;
+  color:white;
+  text-shadow:2px 2px 3px black;
 `;
 
 const Button = styled.button`
-  padding: 10px;
-  font-size: 20px;
-  background-color: transparent;
+  border-radius:10px;
+  padding: 15px 25px;
+  font-size: 12px;
+  background-color: red;
+  border:none;
+  color:white;
+  font-weight:bold;
   cursor: pointer;
+
 `;
 
 const Slider = () => {
@@ -96,10 +107,8 @@ const Slider = () => {
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map((item) => (
-          <Slide bg={item.bg} key={item.id}>
-            <ImgContainer>
-              <Image src={item.img} />
-            </ImgContainer>
+          <Slide className="slideBack" style={{backgroundImage: `url(${item.img})`, backgroundSize:"cover",backgroundRepeat:"no-repeat"}}  key={item.id}>
+           
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>

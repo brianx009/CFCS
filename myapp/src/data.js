@@ -1,10 +1,10 @@
 export const sliderItems = [
     {
         id: 1,
-        img: 'https://www.freepnglogos.com/uploads/car-png/car-png-large-images-40.png',
+        img: 'https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2021/Accord-Sedan/Hero/MY21-Accord-Hero-1400-2x.jpg',
         title: 'Cars For College Students',
         desc: "Sign up, Sign in, and get on the road with your new car",
-        bg: 'd2b48c'
+        bg: 'https://www.freepnglogos.com/uploads/car-png/car-png-large-images-40.png'
     },
     {
         id: 2,
