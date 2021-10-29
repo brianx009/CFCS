@@ -1,25 +1,26 @@
 export const sliderItems = [
     {
         id: 1,
-        img: 'https://www.freepnglogos.com/uploads/car-png/car-png-large-images-40.png',
+        img: 'https://automobiles.honda.com/-/media/Honda-Automobiles/Vehicles/2021/Accord-Sedan/Hero/MY21-Accord-Hero-1400-2x.jpg',
         title: 'Cars For College Students',
         desc: "Sign up, Sign in, and get on the road with your new car",
         bg: 'd2b48c'
     },
     {
         id: 2,
-        img: 'https://smartcdn.prod.postmedia.digital/driving/wp-content/uploads/2020/05/chrome-image-411884.png',
-        title: 'Cars For College Students',
+        img: 'https://toyota-cms-media.s3.amazonaws.com/wp-content/uploads/2020/10/2021_Camry_XSE_Hybrid_Silver-Black_003-scaled.jpg',
+        title: 'Finacncing',
         desc: "Sign up, Sign in, and get on the road with your new car",
         bg: 'addae6'
     },
     {
         id: 3,
-        img: 'https://www.freepnglogos.com/uploads/car-png/download-car-png-image-pngimg-1.png',
+        img: 'https://media.ed.edmunds-media.com/kia/stinger/2022/fe/2022_kia_stinger_r34_fe_3152101_1600.jpg',
         title: 'Cars For College Students',
         desc: "Sign up, Sign in, and get on the road with your new car",
         bg: 'd3d3d3'
     },
+    
 
 
 ];

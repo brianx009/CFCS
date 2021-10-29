@@ -6,6 +6,9 @@ import { mobile } from '../responsive'
 
 const Container = styled.div`
 height: 100px;
+position:fixed;
+z-index:100;
+width:100%;
 ${mobile({height: '75px'})}
 `;
 
@@ -74,19 +77,15 @@ const Navbar = () => {
     return (
         <Container>
             <Wrapper>
-                <Left>
-                    <Language>EN</Language>
-                    <SearchContainer> 
-                        <Input placeholder='Search'/>
-                        <Search style = {{color:'gray', fontSize:16}}/>
-                    </SearchContainer>                
-                </Left>
-                <Center><Logo>CFCS.</Logo></Center>
+                
+                <Logo>CFCS</Logo>
                 <Right>
                     <MenuItem>REGISTER</MenuItem>
                     <MenuItem>SIGN IN</MenuItem>
+                    <MenuItem>ABOUT</MenuItem>
+                    <MenuItem>CARS</MenuItem>
                     <MenuItem>
-                        <Badge badgeContent={4} color='primary'>
+                        <Badge badgeContent={0} color='primary'>
                             <ShoppingCartOutlined/>
                         </Badge>
                     </MenuItem>
