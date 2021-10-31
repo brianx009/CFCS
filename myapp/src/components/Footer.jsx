@@ -5,6 +5,7 @@ import { mobile } from "../responsive";
   
 const Container = styled.div`
     display: flex;
+    background-color:rgb(8,8,8);
     ${mobile({flexDirection: 'column'})}
   `;
   
@@ -19,6 +20,7 @@ const Logo = styled.h1``;
   
 const Desc = styled.p`
     margin: 20px 0px;
+    ${mobile({fontSize:"10px"})}
   `;
   
 const SocialContainer = styled.div`
@@ -45,7 +47,11 @@ const Center = styled.div`
   
 const Title = styled.h3`
     margin-bottom: 30px;
+    color:white;
+    font-weight:bold;
+    text-shadow:2px 2px 3px rgb(8,8,8,0.5)
   `;
+  
   
 const List = styled.ul`
     margin: 0;
@@ -63,7 +69,7 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
-    ${mobile({backgroundColor: 'tan'})}
+    ${mobile({backgroundColor: 'red'})}
   `;
  
 const ContactItem = styled.div`
@@ -82,7 +88,7 @@ const Footer = () => {
     return (
       <Container>
         <Left>
-          <Logo>CFCS.</Logo>
+          <Logo>CFCS</Logo>
           <Desc>
           Cars For College Students is a website designed for students who are in the market for the best
             looking cars at the most affordable price. As a family company we will work with you in order to 
@@ -124,7 +130,7 @@ const Footer = () => {
             <ContactItem><Email style={{marginRight: '10px'}}/>
             CFCS@gmail.com
             </ContactItem>
-            <Payment src= 'https://cdn11.bigcommerce.com/s-x7habvccrj/product_images/uploaded_images/payment-methods.png'/>;
+            
         </Right>
       </Container>
     );

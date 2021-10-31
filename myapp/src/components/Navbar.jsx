@@ -4,11 +4,26 @@ import React from 'react'
 import styled from 'styled-components'
 import { mobile } from '../responsive'
 
+import "../components/Nav.css"
+
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect,
+    Link,
+    useLocation,
+  
+    
+  } from "react-router-dom";
+
 const Container = styled.div`
 height: 100px;
 position:fixed;
 z-index:100;
 width:100%;
+background-color: rgba(8, 8, 8, 0.069);
+
 ${mobile({height: '75px'})}
 `;
 
@@ -54,6 +69,7 @@ text-align: center;
 
 const Logo = styled.h1`
     font-weight: bold;
+    text-shadow:2px 2px 3px rgb(8,8,8,8);
     ${mobile({fontSize: '24px'})}
 `
 
@@ -70,7 +86,7 @@ const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
-    ${mobile({fontSize: '12px', marginLeft: '10px'})}
+    ${mobile({fontSize: '8px', marginLeft: '10px'})}
 `
 
 const Navbar = () => {
@@ -78,12 +94,25 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 
-                <Logo>CFCS</Logo>
+            <Link style={{color:"white"}} className="navLink" to="/">
+            <Logo>CFCS</Logo>
+            </Link>
+             
+            
                 <Right>
-                    <MenuItem>REGISTER</MenuItem>
-                    <MenuItem>SIGN IN</MenuItem>
-                    <MenuItem>ABOUT</MenuItem>
-                    <MenuItem>CARS</MenuItem>
+                    <Link className="navLink" exact to="/">
+                    <MenuItem>Home</MenuItem>
+                    </Link>
+                   
+                    <Link className="navLink" exact to="/about">
+                    <MenuItem>About</MenuItem>
+                    </Link>
+                    <Link className="navLink" exact to="/productList">
+                    <MenuItem>Cars</MenuItem>
+                    </Link>
+                    <Link style={{textDecoration:"none"}} exact to="/login">
+                    <MenuItem  className="navBtn">Sign In</MenuItem>
+                    </Link>
                     <MenuItem>
                         <Badge badgeContent={0} color='primary'>
                             <ShoppingCartOutlined/>

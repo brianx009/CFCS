@@ -10,14 +10,43 @@ const Container = styled.div`
     justify-content: space-between;
     ${mobile({padding: '0px', flexDirection:'column'})}
 `
+const ButtonCat = styled.div`
+background-color:red;
+padding:10px 30px;
+width:30%;
+position:relative;
+left:30%;
+color:white;
+border-radius:10px;
+text-align:center;
+box-shadow: 3px 3px 3px rgba(8, 8, 8, 0.822);
+font-weight:bold;
+`
 
 
  const Categories = () => {
-    return <Container>
+    return( 
+
+        <div>
+            <Container>
         {categories.map(item=> (
                 <CategoryItem item={item} key={item.id}/>
             ))}
+
+        
         </Container>
+
+        <ButtonCat>View All</ButtonCat>
+
+
+        </div>
+    
+    
+
+    )
+
+        
+      
 }
 
 export default Categories
