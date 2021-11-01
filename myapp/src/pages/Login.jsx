@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { mobile } from '../responsive'
+import Navbar from '../components/Navbar'
 
 
 const Container = styled.div`
@@ -13,6 +14,7 @@ const Container = styled.div`
 
         background-size: cover;
         display: flex;
+        flex-direction:column;
         align-items: center;
         justify-content: center;
 `
@@ -21,6 +23,14 @@ const Wrapper = styled.div`
         padding: 20px;
         background-color: white;
         ${mobile({width: '75%'})}
+
+`
+const NavContain = styled.div`
+        background-color:red;
+        width:100%;
+        position:relative;
+        bottom:30vh;
+        
 
 `
 const Title = styled.h1`
@@ -57,8 +67,16 @@ const Link = styled.a`
 
 export const Login = () => {
     return (
+            
         <Container>
+                 <NavContain>
+                         <Navbar/>
+                 </NavContain>
             <Wrapper>
+                    
+
+          
+                
                 <Title>Sign In</Title>
                 <Form>
                     <Input placeholder='username'/>
@@ -68,7 +86,9 @@ export const Login = () => {
                     <Link>Create New Account</Link>
                 </Form>
             </Wrapper>
+            
         </Container>
+        
     )
 }
 

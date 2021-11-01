@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from '@material-ui/icons';
 import { useState } from 'react';
 import styled from 'styled-components';
 import { sliderItems } from '../data';
+import { mobile } from '../responsive';
 
 
 const Container = styled.div`
@@ -65,6 +66,7 @@ const Title = styled.h1`
   font-size: 70px;
   color:white;
   text-shadow:2px 2px 3px black;
+  ${mobile({fontSize:"10px;"})}
 `;
 
 const Desc = styled.p`
@@ -86,6 +88,7 @@ const Button = styled.button`
   color:white;
   border-radius:10px;
   box-shadow:2px 2px 3px black;
+  font-weight: bold;
 
 `;
 

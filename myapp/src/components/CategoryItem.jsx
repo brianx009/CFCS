@@ -1,5 +1,13 @@
 import styled from 'styled-components'
 import { mobile } from '../responsive'
+import React, { useState } from 'react';
+
+import {
+    BrowserRouter as Router,
+    
+    Link,
+    
+  } from "react-router-dom";
 
 const Container = styled.div`
     flex: 1;
@@ -28,6 +36,7 @@ const Info = styled.div`
 const Title = styled.h1`
     color: white;
     margin-bottom: 20px;
+    text-shadow:2px 3px 3px rgb(8,8,8,8);
 
 `
 const Button = styled.button`
@@ -42,11 +51,14 @@ const Button = styled.button`
 export default function CategoryItem({item}) {
     return (
         <Container>
+            <Link to={`productList/${item.cat}`}>
+            
             <Image src={item.img}/>
             <Info>
                 <Title>{item.title}</Title>
                 <Button>Shop Now</Button>
             </Info>
+            </Link>
         </Container>
     )
 }

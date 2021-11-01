@@ -33,8 +33,8 @@ import styled from 'styled-components';
   `;
   
   const Circle = styled.div`
-    width: 325px;
-    height: 325px;
+    width: 205px;
+    height: 205px;
     border-radius: 50%;
     background-color: tan;
     position: absolute;
@@ -42,13 +42,14 @@ import styled from 'styled-components';
   
   const Image = styled.img`
     height: 75%;
+    width:20%;
     z-index: 2;
   `;
   
   const Icon = styled.div`
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 20%;
     background-color: white;
     display: flex;
     align-items: center;
