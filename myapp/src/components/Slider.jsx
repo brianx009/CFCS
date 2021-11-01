@@ -6,7 +6,6 @@ import { mobile } from '../responsive';
 
 import {
   BrowserRouter as Router,
- 
   Link,
 
 
