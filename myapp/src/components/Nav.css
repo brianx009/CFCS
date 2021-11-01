@@ -1,11 +1,11 @@
 .navLink{
     text-decoration: none;
-    color:rgba(8, 8, 8, 0.349)
+    color:rgb(8, 8, 8)
 }
 
 .navLink:hover{
     text-decoration: none;
-    color:rgb(216, 215, 215);
+    color:rgb(223, 1, 1)
 }
 .icon{
   text-decoration: none;
@@ -25,5 +25,11 @@
   box-shadow:2px 2px 3px black;
   text-decoration: none;
   font-weight: bold;
+
+}
+
+.navBtn:hover{
+  background-color: white;
+  color: red;
 
 }

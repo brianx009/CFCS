@@ -4,6 +4,16 @@ import styled from 'styled-components';
 import { sliderItems } from '../data';
 import { mobile } from '../responsive';
 
+import {
+  BrowserRouter as Router,
+ 
+  Link,
+
+
+  
+} from "react-router-dom";
+
+
 
 const Container = styled.div`
   width: 100%;
@@ -114,7 +124,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOW NOW</Button>
+              <Link className="navBtn" to="/productList">Show Now</Link>
             </InfoContainer>
           </Slide>
         ))}
