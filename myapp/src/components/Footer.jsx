@@ -5,7 +5,8 @@ import { mobile } from "../responsive";
   
 const Container = styled.div`
     display: flex;
-    background-color:rgb(8,8,8);
+    background-color:red;
+    
     ${mobile({flexDirection: 'column'})}
   `;
   
@@ -14,12 +15,16 @@ const Left = styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
+    color:rgb(243, 243, 243);
+    text-shadow:1px 1px 7px rgba(8, 8, 8, 0.2);
+    font-weight:bold;
   `;
   
 const Logo = styled.h1``;
   
 const Desc = styled.p`
     margin: 20px 0px;
+    color:white;
     ${mobile({fontSize:"10px"})}
   `;
   
@@ -42,6 +47,9 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 20px;
+    color:white;
+    text-shadow:1px 1px 7px rgba(8, 8, 8, 0.2);
+    font-weight:bold;
     ${mobile({display: 'none'})}
   `;
   
@@ -49,7 +57,7 @@ const Title = styled.h3`
     margin-bottom: 30px;
     color:white;
     font-weight:bold;
-    text-shadow:2px 2px 3px rgb(8,8,8,0.5)
+    text-shadow:2px 2px 3px rgb(8,8,8,0.2)
   `;
   
   
@@ -69,7 +77,10 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 20px;
+    color:white;
+    text-shadow:1px 2px 3px rgb(8,8,8,0.5);
     ${mobile({backgroundColor: 'red'})}
+
   `;
  
 const ContactItem = styled.div`
@@ -96,13 +107,15 @@ const Footer = () => {
           </Desc>
           <SocialContainer>
             <SocialIcon color="3B5999">
-              <Facebook />
+              <a className="icon" target="blank" href="https://www.facebook.com/">< Facebook /></a>
             </SocialIcon>
             <SocialIcon color="E4405F">
-              <Instagram />
+            <a className="icon" target="blank" href="https://www.instagram.com/"> <Instagram /></a>
+             
             </SocialIcon>
             <SocialIcon color="55ACEE">
-              <Twitter />
+            <a className="icon" target="blank" href="https://twitter.com/?lang=en"> <Twitter /></a>
+             
             </SocialIcon>
           </SocialContainer>
         </Left>
