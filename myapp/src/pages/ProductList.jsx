@@ -81,13 +81,12 @@ const ProductList = () => {
           </Select>
           <Select name="size" onChange={handleFilters}>
             <Option disabled >
-              Size
+              Category
             </Option>
-            <Option>XS</Option>
-            <Option>S</Option>
-            <Option>M</Option>
-            <Option>L</Option>
-            <Option>XL</Option>
+            <Option>Trucks</Option>
+            <Option>Sports cars</Option>
+            <Option>Eco</Option>
+           
           </Select>
         </Filter>
         <Filter>

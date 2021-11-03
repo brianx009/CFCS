@@ -83,7 +83,7 @@ export const Login = () => {
                     <Input placeholder='password'/>
                     <Button>Sign In</Button>
                     <Link>Forgot Password?</Link>
-                    <Link>Create New Account</Link>
+                    <Link to="/register">Create New Account</Link>
                 </Form>
             </Wrapper>
             
