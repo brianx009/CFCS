@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 const Container = styled.div`
     height: 30px;
+    position:fixed;
+    z-index:100;
+    width:100%;
     background-color: black;
     color: white;
     display: flex;

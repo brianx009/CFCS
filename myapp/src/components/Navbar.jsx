@@ -18,7 +18,7 @@ import {
   } from "react-router-dom";
 
 const Container = styled.div`
-height: 100px;
+height: 15vh;
 position:fixed;
 z-index:100;
 width:100%;
@@ -29,11 +29,11 @@ ${mobile({height: '75px'})}
 
 const Wrapper = styled.div
 `
-padding: 10px 20px;
+padding: 40px 20px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-${mobile({padding: '10px 0px'})}
+${mobile({padding: '30px 0px'})}
 `;
 
 const Left = styled.div`

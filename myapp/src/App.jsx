@@ -7,6 +7,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import About from './pages/About'
 
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -34,7 +35,7 @@ const App = () => {
       <Route path="/products/:category">
         <ProductList/>
       </Route>   
-      <Route path="/product/:id">
+      <Route path="/product">
         <Product/>
       </Route>   
       <Route path="/cart">
