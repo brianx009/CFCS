@@ -141,7 +141,7 @@ const Footer = () => {
             1-(909)-888-CFCS
             </ContactItem>
             <ContactItem><Email style={{marginRight: '10px'}}/>
-            CFCS@gmail.com
+            CFCS@gmail.com   
             </ContactItem>
             
         </Right>

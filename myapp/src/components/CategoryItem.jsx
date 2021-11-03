@@ -51,7 +51,7 @@ const Button = styled.button`
 export default function CategoryItem({item}) {
     return (
         <Container>
-            <Link to={`productList/${item.cat}`}>
+            <Link to={`products/${item.cat}`}>
             
             <Image src={item.img}/>
             <Info>
