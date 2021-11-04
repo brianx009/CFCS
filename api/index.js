@@ -30,12 +30,12 @@ app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
 //serve static assets if in production
-if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === 'production') {
     //set static folder
-    app.use(express.static('myapp/build'));
+    app.use(express.static('CFCS/build'));
 
     app.get('*', (req, res) => {
-        res.sendFile(path.resolve(__dirname, 'myapp', 'build', 'index.html'));
+        res.sendFile(path.resolve(__dirname, 'CFCS', 'build', 'index.html'));
     });
 
 }
