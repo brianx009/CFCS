@@ -27,10 +27,10 @@ app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
-app.use("/api/checkout", stripeRoute);
+app.use("/myapp/src/pages/Cart", stripeRoute);
 
 //serve static assets if in production
-if(process.env.NODE_ENV === 'production') {
+if (process.env.NODE_ENV === 'production') {
     //set static folder
     app.use(express.static('CFCS/build'));
 
