@@ -9,6 +9,7 @@ const cartRoute = require("./routes/cart");
 const orderRoute = require("./routes/order");
 const stripeRoute = require("./routes/stripe");
 const cors = require("cors");
+const path = require('path');
 
 dotenv.config();
 
@@ -27,6 +28,18 @@ app.use("/api/products", productRoute);
 app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
+
+//serve static assets if in production
+if(process.env.NODE_ENV === 'production'){
+    //set static folder
+    app.use(express.static('myapp/build'));
+
+    app.get('*', (req, res) => {
+        res.sendFile(path.resolve(__dirname, 'myapp', 'build', 'index.html'));
+    });
+
+}
+
 
 app.listen(process.env.PORT || 5000, () => {
     console.log("Backend server is running!");
