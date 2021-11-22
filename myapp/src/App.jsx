@@ -8,6 +8,9 @@ import Register from './pages/Register';
 import About from './pages/About'
 
 
+
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -46,6 +49,10 @@ const App = () => {
       </Route> 
       <Route exact path="/about">
        <About/>
+      </Route> 
+
+      <Route exact path="/cart">
+       <Cart/>
       </Route> 
 
       {/* If statement to determine if user is logged in */}

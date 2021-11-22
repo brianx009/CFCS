@@ -72,7 +72,7 @@ export const Login = () => {
                  <NavContain>
                          <Navbar/>
                  </NavContain>
-            <Wrapper>
+                 <Wrapper>
                     
 
           
@@ -83,7 +83,7 @@ export const Login = () => {
                     <Input placeholder='password'/>
                     <Button>Sign In</Button>
                     <Link>Forgot Password?</Link>
-                    <Link to="/register">Create New Account</Link>
+                    <Link exact to="/register">Create New Account</Link>
                 </Form>
             </Wrapper>
             

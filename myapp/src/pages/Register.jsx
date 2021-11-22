@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Navbar from "../components/Navbar";
 import { mobile } from '../responsive'
 
 
@@ -55,9 +56,12 @@ const Button = styled.button`
 export const Register = () => {
     return (
         <Container>
+           
             <Wrapper>
+            
                 <Title>Create An Account</Title>
                 <Form>
+                    
                     <Input placeholder='first name'/>
                     <Input placeholder='last name'/>
                     <Input placeholder='username'/>
