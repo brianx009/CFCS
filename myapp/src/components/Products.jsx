@@ -33,6 +33,7 @@ const Products = ({ cat, filters, sort }) => {
     getProducts();
   }, [cat]);
 
+       productsUpdate
   useEffect(() => {
     cat &&
       setFilteredProducts(
@@ -53,6 +54,12 @@ const Products = ({ cat, filters, sort }) => {
     </Container>
   );
 };
+
+    const getProducts = async () =>{
+      try{
+        const res = await axios.get("http:localhost:5000/CFCSDatabase/products");
+        console.log(res);
+     main
 
 export default Products; */
 

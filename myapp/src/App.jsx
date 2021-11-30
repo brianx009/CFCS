@@ -7,6 +7,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import About from "./pages/About";
 
+
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -19,6 +22,7 @@ const App = () => {
   return (
     <Router>
       <Switch>
+         productsUpdate
         <Route exact path="/">
           <Home />
         </Route>
@@ -47,6 +51,46 @@ const App = () => {
         </Route>
 
         {/* If statement to determine if user is logged in */}
+
+      <Route exact path="/">
+        <Home/>
+      </Route> 
+      <Route path="/productList">
+        <ProductList/>
+      </Route>  
+      <Route path="/products/:category">
+        <ProductList/>
+      </Route>   
+      <Route path="/product">
+        <Product/>
+      </Route>   
+      <Route path="/cart">
+        <Cart/>
+      </Route> 
+      <Route exact path="/">
+        <Home/>
+      </Route> 
+      <Route exact path="/about">
+       <About/>
+      </Route> 
+
+      <Route exact path="/cart">
+       <Cart/>
+      </Route> 
+
+      {/* If statement to determine if user is logged in */}
+
+    
+      <Route path="/login">
+        <Login/>
+      </Route>  
+
+      
+      <Route path="/register">
+        <Register/>
+      </Route>    
+       
+     main
       </Switch>
     </Router>
   );
