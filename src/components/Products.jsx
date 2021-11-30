@@ -28,7 +28,7 @@ const Products = ({cat,filters,sort}) => {
         console.log(res);
 
       }catch(err){
-          console.log("suck my cock!");
+          console.log("Error 404");
       }
     }
    getProducts();
