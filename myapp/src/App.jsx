@@ -28,25 +28,33 @@ const App = () => {
         <Route path="/products/:category">
           <ProductList />
         </Route>
-        <Route path="/product/:id">
+        <Route path="/product">
           <Product />
         </Route>
         <Route path="/cart">
           <Cart />
         </Route>
-        <Route exact path="/login">
+        {/*         <Route exact path="/login">
           {user ? <Redirect to="/" /> : <Login />}
           <Login />
         </Route>
         <Route path="/register">
           {user ? <Redirect to="/" /> : <Register />}
           <Register />
-        </Route>
+        </Route> */}
         <Route exact path="/about">
           <About />
         </Route>
 
         {/* If statement to determine if user is logged in */}
+
+        <Route path="/login">
+          <Login />
+        </Route>
+
+        <Route path="/register">
+          <Register />
+        </Route>
       </Switch>
     </Router>
   );

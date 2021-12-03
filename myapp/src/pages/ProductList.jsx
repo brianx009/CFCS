@@ -53,29 +53,33 @@ const ProductList = () => {
       [e.target.name]: value,
     });
   };
-
+  console.log(filters);
   return (
     <Container>
       <Navbar />
       <Announcement />
-
+      {/* <Title>{cat}</Title> */}
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select name="Color" onChange={handleFilters}>
-            <Option disabled>Color</Option>
+          <Select name="categories" onChange={handleFilters}>
+            <Option disabled selected>
+              Cat
+            </Option>
+            <Option>Trucks</Option>
+            <Option>Sports</Option>
+            <Option>Eco</Option>
+          </Select>
+          <Select name="color" onChange={handleFilters}>
+            <Option disabled selected>
+              Color
+            </Option>
             <Option>White</Option>
             <Option>Black</Option>
             <Option>Red</Option>
             <Option>Blue</Option>
             <Option>Yellow</Option>
-            <Option>Green</Option>
-          </Select>
-          <Select name="Size" onChange={handleFilters}>
-            <Option disabled>Size</Option>
-            <Option>Trucks</Option>
-            <Option>Sport</Option>
-            <Option>Eco</Option>
+            <Option>Grey</Option>
           </Select>
         </Filter>
         <Filter>
