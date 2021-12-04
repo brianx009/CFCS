@@ -43,33 +43,30 @@ const Select = styled.select`
 const Option = styled.option``;
 
 const ProductList = () => {
-
     const location = useLocation();
-    const cat = location.pathname.split("/")[2];
-    const[filters,setFilters] = useState({});
-    const[sort,setSort] = useState("newest");
+    const cat = location.pathname.split('/')[2]
+    const [filters, setFilters] = useState({})
+    const [sort, setSort] = useState("newest")
 
     const handleFilters = (e) =>{
-        const value = e.target.value;
-        setFilters({
-            ...filters,
-            [e.target.name]:value,
-        });
-    };
-
-    console.log(filters);
-
-
+      const value = e.target.value;
+      setFilters({
+        ...filters,
+        [e.target.name]: value,
+      })
+    }
+    
+    
   return (
     <Container>
       <Navbar />
       <Announcement />
-      
       <FilterContainer>
+      <Title>{cat}</Title>
         <Filter>
           <FilterText>Filter Products:</FilterText>
           <Select name="color" onChange={handleFilters}>
-            <Option disabled >
+            <Option disabled>
               Color
             </Option>
             <Option>White</Option>
@@ -78,15 +75,27 @@ const ProductList = () => {
             <Option>Blue</Option>
             <Option>Yellow</Option>
             <Option>Green</Option>
+            <Option>Grey</Option>
           </Select>
-          <Select name="size" onChange={handleFilters}>
-            <Option disabled >
-              Category
+          <Select name="categories" onChange={handleFilters}>
+            <Option disabled>
+              Brand
             </Option>
-            <Option>Trucks</Option>
-            <Option>Sports cars</Option>
-            <Option>Eco</Option>
-           
+            <Option>Chevrolet</Option>
+            <Option>Chrysler</Option>
+            <Option>Dodge</Option>
+            <Option>Ford</Option>
+            <Option>Honda</Option>
+            <Option>Jeep</Option>
+            <Option>Lexus</Option>
+            <Option>Mazda</Option>
+            <Option>Nissan</Option>
+            <Option>Tesla</Option>
+            <Option>Toyota</Option>
+            <Option>Volkswagen</Option>
+            
+            
+            
           </Select>
         </Filter>
         <Filter>

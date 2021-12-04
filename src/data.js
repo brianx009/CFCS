@@ -30,7 +30,7 @@ export const categories = [
       id: 1,
       img: 'https://www.mustangspecs.com/wp-content/uploads/2020/08/black-ford-mustang-2019-5k-xu-scaled.jpg',
       title: "Sports Cars",
-      cat: "sports",
+      cat: "Sports",
     },
     {
       id: 2,

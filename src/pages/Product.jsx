@@ -1,10 +1,13 @@
-import { Add, Remove } from '@material-ui/icons';
-import styled from 'styled-components'
-import Announcement from '../components/Announcement';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-import Newsletter from '../components/Newsletter';
-import { mobile } from '../responsive';
+import { Add, Remove } from "@material-ui/icons";
+import styled from "styled-components";
+import Announcement from "../components/Announcement";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import Newsletter from "../components/Newsletter";
+import { mobile } from "../responsive";
+import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div`
 
@@ -85,25 +88,49 @@ const Button = styled.button`
 `;
 
 export const Product = () => {
+    const location = useLocation();
+    const id = location.pathname.split('/')[2]
+    const [product, setProduct] = useState({});
+    const [quantity, setQuantity] = useState(1);
+
+    useEffect(()=>{
+        const getProduct = async ()=>{
+            try{
+                const res = await publicRequest.get('/products/find/'+id)
+                setProduct(res.data);
+            }catch{}
+        };
+        getProduct()
+    })
+
+    const handleQuantity = (type) =>{
+        if(type === 'dec'){
+            (quantity >= 1) && setQuantity(quantity - 1);
+        } else {
+            ( quantity <= 0) && setQuantity(quantity + 1);
+        }
+    };
+    
+
     return (
         <Container>
             <Navbar/>
             <Announcement/>
             <Wrapper>
                 <ImgContainer>
-                    <Image src='https://www.thegroupnc.com/wp-content/uploads/2017/12/Honda.png'/>
+                    <Image src={product.img}/>
                 </ImgContainer>
                 <InfoContainer>
-                    <Title>2017 Honda Accord</Title>
-                    <Desc>The 2021 Honda Accord does most everything well and finishes near the top of our midsize car rankings.
-                         Its standout attributes include its engaging driving dynamics and upscale interior.
+                    <Title>{product.title}</Title>
+                    <Desc>{product.desc}
                     </Desc>
-                    <Price>$9,999</Price>
+                    <Price>$ {product.price}</Price>
 
                     <AddContainer>
                         <AmountContainer>
-                            <Remove/>
-                            <Amount>1</Amount>
+                            <Remove onClick = {()=> handleQuantity('dec')}/>
+                            <Amount>{quantity}</Amount>
+                            <Add onClick = {()=> handleQuantity('inc')}/>
                             <Add/>
                         </AmountContainer>
                         <Button>ADD TO CART</Button>
