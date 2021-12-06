@@ -8,6 +8,8 @@ import { mobile } from "../responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { publicRequest } from "../requestMethods";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const Container = styled.div`
 
@@ -92,6 +94,7 @@ export const Product = () => {
     const id = location.pathname.split('/')[2]
     const [product, setProduct] = useState({});
     const [quantity, setQuantity] = useState(1);
+    const dispatch = useDispatch();
 
     useEffect(()=>{
         const getProduct = async ()=>{
@@ -112,6 +115,9 @@ export const Product = () => {
     };
     
 
+    const handleClick =()=>{
+        dispatch(addProduct({ ...product, quantity}));
+    }
     return (
         <Container>
             <Navbar/>
@@ -133,7 +139,7 @@ export const Product = () => {
                             <Add onClick = {()=> handleQuantity('inc')}/>
                             <Add/>
                         </AmountContainer>
-                        <Button>ADD TO CART</Button>
+                        <Button onClick={handleClick}>ADD TO CART</Button>
                     </AddContainer>
                 </InfoContainer>
             </Wrapper>

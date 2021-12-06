@@ -84,7 +84,7 @@ export const Product = () => {
                 <AboutText>
                     <AboutTitle>About US</AboutTitle>
                     <AboutSubTitle>Cars For College Students is a website designed for students who are in the market for the best looking cars at the most affordable price. As a family company we will work with you in order to achieve complete satisfaction and get you out the door driving your new car.</AboutSubTitle>
-                    <AboutButton>Learn More</AboutButton>
+                    
                     
                 </AboutText>
 

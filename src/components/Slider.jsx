@@ -123,7 +123,9 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Link className="navBtn" to="/productList">Show Now</Link>
+              <Link exact to='/productList'>
+                <Button style={{textDecoration:"none", color:'white'}} className="navBtn" to="/productList">Shop Featured Products</Button>
+              </Link>
             </InfoContainer>
           </Slide>
         ))}

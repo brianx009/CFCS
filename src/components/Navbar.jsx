@@ -3,19 +3,10 @@ import { Search, ShoppingCartOutlined } from '@material-ui/icons'
 import React from 'react'
 import styled from 'styled-components'
 import { mobile } from '../responsive'
-
+import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 import "../components/Nav.css"
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Redirect,
-    Link,
-    useLocation,
-  
-    
-  } from "react-router-dom";
 
 const Container = styled.div`
 height: 15vh;
@@ -83,6 +74,9 @@ ${mobile({flex: 2,justifyContent: 'center'})}
 `
 
 const MenuItem = styled.div`
+    navLink: hover{
+        color:red
+    }
     font-size: 14px;
     cursor: pointer;
     margin-left: 25px;
@@ -90,34 +84,38 @@ const MenuItem = styled.div`
 `
 
 const Navbar = () => {
+    const quantity = useSelector(state=>state.cart.quantity)
     return (
         <Container>
             <Wrapper>
                 
-            <Link style={{color:"white"}} className="navLink" to="/">
+            <Link style={{textDecoration:"none"}} className="navLink" to="/">
             <Logo>CFCS</Logo>
             </Link>
-             
-            
                 <Right>
-                    <Link className="navLink" exact to="/">
+                    <Link style={{textDecoration:"none"}} className="navLink" exact to="/">
                     <MenuItem>Home</MenuItem>
                     </Link>
                    
-                    <Link className="navLink" exact to="/about">
+                    <Link style={{textDecoration:"none"}} className="navLink" exact to="/about">
                     <MenuItem>About</MenuItem>
                     </Link>
-                    <Link className="navLink" exact to="/productList">
+                    <Link style={{textDecoration:"none"}} className="navLink" exact to="/productList">
                     <MenuItem>Cars</MenuItem>
                     </Link>
-                    <Link style={{textDecoration:"none"}} exact to="/login">
-                    <MenuItem  className="navBtn">Sign In</MenuItem>
+                    <Link style={{textDecoration:"none"}} to="/Register">
+                    <MenuItem  className="navLink">Register</MenuItem>
                     </Link>
+                    <Link style={{textDecoration:"none"}} to="/Login">
+                    <MenuItem  className="navLink">Login</MenuItem>
+                    </Link>
+                    <Link style={{textDecoration:"none"}} to='/cart'>
                     <MenuItem>
-                        <Badge badgeContent={0} color='primary'>
+                        <Badge className='navLink' badgeContent={quantity} color='primary'>
                             <ShoppingCartOutlined/>
                         </Badge>
                     </MenuItem>
+                    </Link>
                     </Right>
             </Wrapper>
         </Container>

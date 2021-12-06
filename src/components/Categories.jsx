@@ -36,7 +36,7 @@ font-weight:bold;
         
         </Container>
 
-        <ButtonCat>View All</ButtonCat>
+        <h1 style={{textDecoration:"none", color:'Grey'}}>Featured Products</h1>
 
 
         </div>
